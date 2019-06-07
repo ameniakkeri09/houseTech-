@@ -1,0 +1,246 @@
+<html>
+<head>
+<title> regst</title>
+<link rel="icon" type="image/png" href="img/logo.png" />
+<link rel="stylesheet" href="calandar/sheet1.css">
+<link rel="stylesheet" href="calandar/sheet2.css">
+<script src="calandar/sheet1.js"></script>
+<script src="calandar/sheet2.js"></script>
+
+<meta charset="utf-8">
+
+
+	<script language="JavaScript">
+function verif()
+{ 
+	if(document.f.nom.value == "") { alert("your first name please!!");
+        return false; }
+  if(document.f.prenom.value == "") { alert("your first prenom please!!");
+        return false; }
+if(document.f.birthdate.value == "") { alert("your birthdate please!!"); return false; };
+ if(document.f.user.value == "") { alert("your username please!!"); return false; };
+ if(document.f.mail.value == "") { alert("your mail please!!"); return false; };
+  if(document.f.mail.value == "") { alert("your last name please!!"); return false; };
+ if(document.f.mail.value.indexOf('@') == -1) { alert("mail not correct!!"); return false; 
+}
+if(document.f.password.value !=document.f.ppassword.value) { alert("password not the same!!"); return false; 
+} }
+</script>
+<script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+
+</head>
+<body >
+<form name="f" method="post">
+<div class="body"></div>
+		<div class="grad"></div>
+		<div class="header">
+			<div>Site<br><b><a onmouseover="this.style.color='#33042e'"
+                                   onmouseout="this.style.color='#2d0529'" onclick="this.style.color='#2b1429 '"
+                                   ondblclick="this.style.color='#331b30 '" href="index.html">HouseTech</a></b></div>
+		</div>
+		<div class="login">
+				<input type="text" placeholder="first name" name="nom"><br><br>
+				<input type="text" placeholder="last name" name="prenom"><br><br>
+				<input type="text" placeholder="username" name="user"><br><br>
+			    <input type="text" name="birthdate" id="datepicker" placeholder="enter you birthdate" ></p>
+				<input type="text" placeholder="mail" name="mail"><br>
+				<input type="password" placeholder="password" name="password"><br>
+				<input type="password" placeholder=" repeat password" name="ppassword"><br>
+				<input type="button" value="sign up" onclick="return verif()">
+		</div>
+	</form>
+		<style>
+		@import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+body{
+	margin: 0;
+	padding: 0;
+	background: #fff;
+
+	color: #fff;
+	font-family: Arial;
+	font-size: 12px;
+}
+
+.body{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background-image: url(img/pc1.jpg);
+	background-size: cover;
+	-webkit-filter: blur(3px);
+	z-index: 0;
+}
+
+.grad{
+	position: left;
+	top: -20px;
+	left: 60px;
+	right: -60px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+	z-index: 1;
+	opacity: 0.7;
+}
+
+.header{
+	position: absolute;
+	top: calc(50% - 35px);
+	left: calc(50% - 255px);
+	z-index: 2;
+}
+
+.header div{
+	float: left;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 35px;
+	font-weight: 200;
+}
+
+
+
+
+.login{
+	position: absolute;
+	top: calc(50% - 75px);
+	left: calc(50% - 50px);
+	height: 150px;
+	width: 350px;
+	padding: 10px;
+	z-index: 2;
+}
+
+.login input[type=text]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+}
+
+.login input[type=password]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+
+.login input[type=button]{
+	width: 260px;
+	height: 35px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #a18d6c;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.login input[type=button]:hover{
+	opacity: 0.8;
+}
+
+.login input[type=button]:active{
+	opacity: 0.6;
+}
+
+.login input[type=text]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=password]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=button]:focus{
+	outline: none;
+}
+
+::-webkit-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+
+::-moz-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+.ml6 {
+  position: relative;
+  font-weight: 900;
+  font-size: 3.3em;
+}
+
+.ml6 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml6 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+</style>
+<script type="text/javascript">
+	{$('.ml6 .letters').each(function(){
+  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+});
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml6 .letter',
+    translateY: ["1.1em", 0],
+    translateZ: 0,
+    duration: 750,
+    delay: function(el, i) {
+      return 50 * i;
+    }
+  }).add({
+    targets: '.ml6',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });}
+</script>
+ <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+</body>

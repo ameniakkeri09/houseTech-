@@ -1,0 +1,252 @@
+<html>
+<head>
+<title> regst</title>
+<link rel="icon" type="image/png" href="logo200.jpg" />
+<meta charset="utf-8">
+
+
+	<script language="JavaScript">
+function verif()
+{ 
+	if(document.f.nom.value == "") { alert("your first name please!!");
+return false; };
+ if(document.f.user.value == "") { alert("your username please!!"); return false; };
+ if(document.f.mail.value == "") { alert("your mail please!!"); return false; };
+  if(document.f.mail.value == "") { alert("your last name please!!"); return false; };
+ if(document.f.mail.value.indexOf('@') == -1) { alert("mail not correct!!"); return false; 
+}
+if(document.f.password.value !=document.f.ppassword.value) { alert("password not the same!!"); return false; 
+} }
+function remplir()
+{
+for(i=1;i=<31;i++)
+	document.f1.jour.options[i]= new option(i,i);
+for(i=1;i=<12;i++)
+	document.f1.mois.options[i]= new option(i,i);
+for(i=1970;i=<2010;i++)
+	document.f1.annee.options[i-1969]= new option(i,i);
+}
+
+
+	</script>
+</head>
+<body onload="remplir()">
+<form name="f1"  >
+<div class="body"></div>
+		<div class="grad"></div>
+		<div class="header">
+			<div>Site<br><span>House_Tech</span></div>
+		</div>
+		<div class="login">
+				<input type="text" placeholder="first name" name="nom"><br><br>
+				<input type="text" placeholder="last name" name="prenom"><br><br>
+				<input type="text" placeholder="username" name="user"><br><br>
+				<select name='annee'>
+	              <option>Année</option>
+                   </select>
+                  <select name='mois'>
+	              <option>Mois</option>
+                  </select>
+                  <select name='jour'>
+	              <option >Jour</option>
+                  </select><br>
+                <br>  <select name='pays' id='liste'>
+	              <option value='0'>nabeul</option>
+	              <option value='1'>tunis</option>
+	              <option value='2'>sousse</option>
+	              <option value='3'>monastir</option>
+	              <option value='4'>sfax</option>
+	              <option value='5'>mahdia</option>
+	              <option value='6'>kairaouen</option>
+	              <option value='7'>hammamet</option>
+                  </select><br>
+				<br><input type="text" placeholder="mail" name="mail"><br>
+				<input type="password" placeholder="password" name="password"><br>
+				<input type="password" placeholder=" repeat password" name="ppassword"><br>
+				<input type="button" value="sign up" onclick="verif()">
+		</div>
+	</form>
+		<style>
+		@import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+body{
+	margin: 0;
+	padding: 0;
+	background: #fff;
+
+	color: #fff;
+	font-family: Arial;
+	font-size: 12px;
+}
+
+.body{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background-image: url(image6.png);
+	background-size: cover;
+	-webkit-filter: blur(3px);
+	z-index: 0;
+}
+
+.grad{
+	position: left;
+	top: -20px;
+	left: 60px;
+	right: -60px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+	z-index: 1;
+	opacity: 0.7;
+}
+
+.header{
+	position: absolute;
+	top: calc(50% - 35px);
+	left: calc(50% - 255px);
+	z-index: 2;
+}
+
+.header div{
+	float: left;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 35px;
+	font-weight: 200;
+}
+
+.header div span{
+	color: #ffb347 !important;
+}
+
+.login{
+	position: absolute;
+	top: calc(50% - 75px);
+	left: calc(50% - 50px);
+	height: 150px;
+	width: 350px;
+	padding: 10px;
+	z-index: 2;
+}
+
+.login input[type=text]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+}
+
+.login input[type=password]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+
+.login input[type=button]{
+	width: 260px;
+	height: 35px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #a18d6c;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.login input[type=button]:hover{
+	opacity: 0.8;
+}
+
+.login input[type=button]:active{
+	opacity: 0.6;
+}
+
+.login input[type=text]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=password]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=button]:focus{
+	outline: none;
+}
+
+::-webkit-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+
+::-moz-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+.ml6 {
+  position: relative;
+  font-weight: 900;
+  font-size: 3.3em;
+}
+
+.ml6 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml6 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+</style>
+<script type="text/javascript">
+	{$('.ml6 .letters').each(function(){
+  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+});
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml6 .letter',
+    translateY: ["1.1em", 0],
+    translateZ: 0,
+    duration: 750,
+    delay: function(el, i) {
+      return 50 * i;
+    }
+  }).add({
+    targets: '.ml6',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });}
+</script>
+</body>
